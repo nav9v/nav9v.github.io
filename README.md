@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My nav9v.github.io Website</title>
+    My nav9v.github.io Website
   </head>
   <body>
     <h1>Welcome to My nav9v.github.io Website</h1>
