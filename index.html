@@ -1,30 +1,92 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Navneet's Website</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-       
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <head>
+    <meta charset="utf-8">
+    <title>JspBack</title>
+    <meta name="description" content="Information">
+    <meta name="author" content="JspBack">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <link class="tlt-pic" rel="shortcut icon" href="/logo1.jpg">
+  
+    <!-- Stylesheets -->
+    <!-- Reset default styles and add support for google fonts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
+   
+    <!-- Custom styles -->
+    <link href="style.css" rel="stylesheet" type="text/css" />
 
-  <main>
-    <h1>Welcome to Navneet's Website</h1>
-    <p>This is my modern website hosted at <a href="https://nav9v.github.io">nav9v.github.io</a>.</p>
-  </main>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>    
 
-  <footer>
-    <p>&copy; 2023 Navneet. All rights reserved.</p>
-  </footer>
-</body>
+    <!-- Want to add Bootstrap? -->
+    <!-- Visit: https://getbootstrap.com/docs/4.3/getting-started/introduction/ -->
+    
+  </head>
+  
+  <body>
+
+    <header id="header">
+      <!--<img src="logo.jpg" class="logo">-->
+      <h1>Yusuf A. Bekci</h1>
+      
+      <!-- Menu link fragment #id should match a div id. Example: <a href="#home"> links to <div id="home"></div>  -->
+      <ul class="main-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#education">Education</a></li>
+      </ul>                 
+    </header>
+   
+    <div id="container">
+      <div class="inner">
+        <div id="content"> 
+          <div id="home" class="content-region hide">
+            <h2>Hi There!</h2>
+            <img src="win98.gif" class="home-pic">
+          </div>
+          
+          <div id="about" class="content-region hide">
+            <img src="logo.jpg" class="logo">
+            <h2>About</h2>
+            <h4>
+               
+            </h4>
+          </div>
+          
+          <div id="contact" class="content-region hide">
+            <p><a href="https://instagram.com/nav9v#gh-dark-mode-only" target="_blank">Instagram</a></p>
+            <p><a href="https://github.com/nav" target="_blank">Github</a></p>
+            <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=navneetsharma2302@gmail.com&su=SUBJECT&body=BODY" target="_blank">Gmail</a></p>
+          </div>
+
+          <div id="education" class="content-region hide">
+            <div claass="edctn">
+              <p><img class="PTU" src="PTULogo (2).png"></p>
+              <h3 class="tlt">&#8594 Punjab Tecnical University</h3>
+              <h4>&#x2022; Computer Science Engineering</h4>
+            </div>
+            <div class="edctn">
+              <p><img class="ndl" src="iitm.png"></p>
+              <h4 class="tlt">&#8594 IIT Madras</h4>
+              <h5>&#x2022; Data Science</h5>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="ff">
+        <p class="flooter-p">THEY WİLL ALWAYS WATCH YOU FOR DATA</p>
+        <p><img class="footer-imgs" src="cat1.gif"><img class="footer-imgs" src="cat2.gif"><img class="footer-imgs" src="cat3.gif"></p>
+      </div>
+    </footer>
+    
+    <!-- Load additional JS scripts here -->
+    <script type="text/javascript" src="script.js"></script>
+    
+  </body>
 </html>
