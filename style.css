@@ -9,7 +9,6 @@ body {
   color: #FFFFFF;
 }
 
-
 a {
   font-weight: normal;
   text-decoration: none; 
@@ -23,7 +22,7 @@ small {
   font-size: 75%;
 }
 
-
+Q
 h1,
 h2,
 h3,
@@ -48,8 +47,6 @@ p {
   margin: 0 auto 1.5em auto; 
 }
 
-
-
 q {
   quotes: '\00201C' '\00201D';
 }
@@ -71,9 +68,6 @@ blockquote p:last-child {
   margin-bottom: 0;  
 }
 
-
-
-
 html, #container, .inner { background-color:transparent;}
 html {
   background:url(background.gif) center center no-repeat fixed;
@@ -89,7 +83,6 @@ header, #content, footer {
   padding:25px;
   color:#FFFFFF; 
 }
-
 
 ul.main-menu {
   margin: 0;
@@ -112,7 +105,6 @@ ul.main-menu li a.active {
   color:#FFFFFF;
   border-bottom-color:#EF6D3D;
 }
-
 
 .hide {
   display:none;
