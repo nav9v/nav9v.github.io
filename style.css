@@ -149,3 +149,11 @@ ul.main-menu li a.active {
 max-width: fit-content;
 max-width: fit-content;
 }
+rickroll-link {
+  color: #ff0000; /* Change the color to red */
+  text-decoration: none; /* Remove the underline */
+}
+
+rickroll-link:hover {
+  color: #00ff00; /* Change the color to green when hovered */
+}
