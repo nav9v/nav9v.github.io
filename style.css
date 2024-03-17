@@ -75,11 +75,11 @@ html {
   display: flex;
 }
 body {
-  max-width:800px;
+  max-width:500px;
   margin:25px auto;
 }
 header, #content, footer { 
-  background: rgba(0,0,0,.8); 
+  background: rgba(0,0,0,.5); 
   padding:25px;
   color:#FFFFFF; 
 }
