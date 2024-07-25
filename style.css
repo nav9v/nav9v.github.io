@@ -287,3 +287,19 @@ video:hover {
   align-items: center;
   padding: 20px;
 }
+
+::-webkit-scrollbar {
+  width: 12px; 
+}
+
+::-webkit-scrollbar-track {
+  background: #1b0606; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #490857; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6d0b83; 
+}
