@@ -303,3 +303,88 @@ video:hover {
 ::-webkit-scrollbar-thumb:hover {
   background: #6d0b83; 
 }
+
+@media screen and (max-width: 768px) {
+  body {
+    margin: 10px;
+    padding: 0 10px;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+  }
+
+  h3 {
+    font-size: 2.0rem;
+  }
+
+  ul.main-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  ul.main-menu li {
+    margin-bottom: 10px;
+  }
+
+  ul.main-menu li a {
+    font-size: 1.8rem;
+  }
+
+  .logo, .home-pic {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+  }
+
+  #about, #links, #education {
+    padding: 15px;
+    margin: 10px 0;
+    width: auto;
+  }
+
+  .PTU {
+    margin-left: 0;
+    width: 120px;
+    height: auto;
+  }
+
+  .footer-imgs {
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+  }
+
+  #sound audio {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 1.4em;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  h2 {
+    font-size: 2.0rem;
+  }
+
+  #clock, #temp {
+    font-size: 1em;
+  }
+
+  .footer-imgs {
+    width: 30px;
+    height: 30px;
+    margin-left: 15px;
+  }
+}
