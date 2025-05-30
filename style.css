@@ -9,6 +9,9 @@ body {
   font-weight: 400;
   font-family: "Roboto", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #FFFFFF;
+  -ms-overflow-style: none; 
+  scrollbar-width: none;  
+  overflow-y: auto; 
 }
 
 * {
