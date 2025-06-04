@@ -11,6 +11,7 @@ body {
   color: #FFFFFF;
   -ms-overflow-style: none; 
   scrollbar-width: none;  
+  
   overflow-y: auto; 
 }
 
