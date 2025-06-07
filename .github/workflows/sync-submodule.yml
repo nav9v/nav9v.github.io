@@ -1,28 +1,28 @@
-name: Sync Portfolio Submodule
-on:
-  repository_dispatch:
-    types: [portfolio-updated]
-  workflow_dispatch:
-  schedule:
-    - cron: '0 */6 * * *'  # Every 6 hours
+# name: Sync Portfolio Submodule
+# on:
+#   repository_dispatch:
+#     types: [portfolio-updated]
+#   workflow_dispatch:
+#   schedule:
+#     - cron: '0 */6 * * *'  # Every 6 hours
 
-jobs:
-  sync:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          submodules: recursive
-          token: ${{ secrets.GITHUB_TOKEN }}
+# jobs:
+#   sync:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v4
+#         with:
+#           submodules: recursive
+#           token: ${{ secrets.GITHUB_TOKEN }}
       
-      - name: Update submodule
-        run: |
-          git submodule update --remote --merge
+#       - name: Update submodule
+#         run: |
+#           git submodule update --remote --merge
           
-      - name: Commit submodule updates
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add .
-          git diff --staged --quiet || git commit -m "Auto-update portfolio submodule"
-          git push
+#       - name: Commit submodule updates
+#         run: |
+#           git config --local user.email "action@github.com"
+#           git config --local user.name "GitHub Action"
+#           git add .
+#           git diff --staged --quiet || git commit -m "Auto-update portfolio submodule"
+#           git push
