@@ -17,7 +17,11 @@ jobs:
       
       - name: Update submodule
         run: |
-          git submodule update --remote --merge
+          cd portfolio
+          git fetch origin
+          git reset --hard origin/main || git reset --hard origin/master
+          cd ..
+          git add portfolio
           
       - name: Commit submodule updates
         run: |
