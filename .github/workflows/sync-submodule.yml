@@ -9,6 +9,8 @@ on:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
         with:
@@ -19,7 +21,15 @@ jobs:
         run: |
           cd portfolio
           git fetch origin
-          git reset --hard origin/main || git reset --hard origin/master
+          # Check which default branch exists and reset to it
+          if git show-ref --verify --quiet refs/remotes/origin/main; then
+            git reset --hard origin/main
+          elif git show-ref --verify --quiet refs/remotes/origin/master; then
+            git reset --hard origin/master
+          else
+            echo "Neither main nor master branch found"
+            exit 1
+          fi
           cd ..
           git add portfolio
           
