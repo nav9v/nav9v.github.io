@@ -1,42 +1,42 @@
-name: Sync Portfolio Submodule
-on:
-  repository_dispatch:
-    types: [portfolio-updated]
-  workflow_dispatch:
-  schedule:
-    - cron: '0 */6 * * *'  # Every 6 hours
+# name: Sync Portfolio Submodule
+# on:
+#   repository_dispatch:
+#     types: [portfolio-updated]
+#   workflow_dispatch:
+#   schedule:
+#     - cron: '0 */6 * * *'  # Every 6 hours
 
-jobs:
-  sync:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          submodules: recursive
-          token: ${{ secrets.GITHUB_TOKEN }}
+# jobs:
+#   sync:
+#     runs-on: ubuntu-latest
+#     permissions:
+#       contents: write
+#     steps:
+#       - uses: actions/checkout@v4
+#         with:
+#           submodules: recursive
+#           token: ${{ secrets.GITHUB_TOKEN }}
       
-      - name: Update submodule
-        run: |
-          cd portfolio
-          git fetch origin
-          # Check which default branch exists and reset to it
-          if git show-ref --verify --quiet refs/remotes/origin/main; then
-            git reset --hard origin/main
-          elif git show-ref --verify --quiet refs/remotes/origin/master; then
-            git reset --hard origin/master
-          else
-            echo "Neither main nor master branch found"
-            exit 1
-          fi
-          cd ..
-          git add portfolio
+#       - name: Update submodule
+#         run: |
+#           cd portfolio
+#           git fetch origin
+#           # Check which default branch exists and reset to it
+#           if git show-ref --verify --quiet refs/remotes/origin/main; then
+#             git reset --hard origin/main
+#           elif git show-ref --verify --quiet refs/remotes/origin/master; then
+#             git reset --hard origin/master
+#           else
+#             echo "Neither main nor master branch found"
+#             exit 1
+#           fi
+#           cd ..
+#           git add portfolio
           
-      - name: Commit submodule updates
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add .
-          git diff --staged --quiet || git commit -m "Auto-update portfolio submodule"
-          git push
+#       - name: Commit submodule updates
+#         run: |
+#           git config --local user.email "action@github.com"
+#           git config --local user.name "GitHub Action"
+#           git add .
+#           git diff --staged --quiet || git commit -m "Auto-update portfolio submodule"
+#           git push
